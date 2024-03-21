@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography, Button, Grid } from "@mui/material";
 import Image from "next/image";
+import "../../../global.css";
 
 import user1 from "public/images/backgrounds/u2.jpg";
 import user2 from "public/images/backgrounds/u3.jpg";
@@ -9,21 +10,21 @@ import user3 from "public/images/backgrounds/u4.jpg";
 const blogs = [
   {
     img: user1,
-    title: "Super awesome, Next 14 is coming soon!",
+    title: "Welcome, Alice!",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    btncolor: "error.main",
+    btncolor: "primary.main",
   },
   {
     img: user2,
-    title: "Super awesome, Next 14 is coming soon!",
+    title: "Welcome, Bob!",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    btncolor: "warning.main",
+    btncolor: "primary.main",
   },
   {
     img: user3,
-    title: "Super awesome, Next 14 is coming soon!",
+    title: "Welcome, Charlie!",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     btncolor: "primary.main",
@@ -50,18 +51,21 @@ const BlogCard = () => {
               width: "100%",
             }}
           >
-            <Image
-              src={blog.img}
-              alt="img"
-              style={{ width: "100%", height: "250px" }}
-            />
+            <div className="image-with-mask">
+              <Image
+                src={blog.img}
+                alt="img"
+                style={{ width: "100%", height: "250px", objectFit: "cover" }}
+              />
+              <div className="gradient-mask" />
+            </div>
             <CardContent
               sx={{
                 paddingLeft: "30px",
                 paddingRight: "30px",
               }}
             >
-              <Typography variant="h4">{blog.title}</Typography>
+              <Typography variant="h2">{blog.title}</Typography>
               <Typography
                 color="textSecondary"
                 mt={1}
@@ -80,7 +84,7 @@ const BlogCard = () => {
                   },
                 }}
               >
-                Learn More
+                More Info
               </Button>
             </CardContent>
           </Card>

@@ -2,7 +2,6 @@ import { createTheme } from "@mui/material/styles";
 import { DM_Sans } from "next/font/google";
 import theme from "../theme";
 
-
 export const dm = DM_Sans({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
@@ -14,9 +13,9 @@ const baselightTheme = createTheme({
   direction: "ltr",
   palette: {
     primary: {
-      main: "#03c9d7",
+      main: "#EC6A6A",
       light: "#e5fafb",
-      dark: "#05b2bd",
+      dark: "#AF5858",
       contrastText: "#ffffff",
     },
     secondary: {
@@ -45,7 +44,7 @@ const baselightTheme = createTheme({
     },
     warning: {
       main: "#fec90f",
-      light: '#fff4e5',
+      light: "#fff4e5",
       dark: "#dcb014",
       contrastText: "#ffffff",
     },
@@ -82,12 +81,12 @@ const baselightTheme = createTheme({
   typography: {
     fontFamily: dm.style.fontFamily,
     h1: {
-      fontWeight: 500,
+      fontWeight: 1000,
       fontSize: "1.875rem",
       lineHeight: "1.5",
     },
     h2: {
-      fontWeight: 500,
+      fontWeight: 800,
       fontSize: "1.5rem",
       lineHeight: "1.5",
     },
@@ -125,13 +124,10 @@ const baselightTheme = createTheme({
     },
   },
   components: {
-
-  
     MuiCssBaseline: {
       styleOverrides: {
         ".MuiPaper-elevation9, .MuiPopover-root .MuiPaper-elevation": {
-          boxShadow:
-            "0px 7px 30px 0px rgba(90, 114, 123, 0.11) !important",
+          boxShadow: "0px 7px 30px 0px rgba(90, 114, 123, 0.11) !important",
         },
         a: {
           textDecoration: "none",
@@ -202,7 +198,6 @@ const baselightTheme = createTheme({
       },
     },
 
-
     MuiAlert: {
       styleOverrides: {
         filledSuccess: {
@@ -248,12 +243,10 @@ const baselightTheme = createTheme({
         outlinedInfo: {
           borderColor: theme.palette.info.main,
           color: theme.palette.info.main,
-        }
+        },
       },
     },
-
   },
-  
 });
 
 export { baselightTheme };

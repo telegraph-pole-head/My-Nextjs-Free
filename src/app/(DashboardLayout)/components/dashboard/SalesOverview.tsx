@@ -6,7 +6,7 @@ const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const SalesOverview = () => {
   const theme = useTheme();
-  const primary = theme.palette.primary.main;
+  const primary = theme.palette.warning.main;
   const secondary = theme.palette.secondary.main;
 
   const optionssalesoverview: any = {
@@ -108,7 +108,7 @@ const SalesOverview = () => {
     },
   ];
   return (
-    <BaseCard title="Sales Overview">
+    <BaseCard title="Statistics Overview">
       <Chart
         options={optionssalesoverview}
         series={seriessalesoverview}

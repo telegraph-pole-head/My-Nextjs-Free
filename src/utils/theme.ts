@@ -36,10 +36,10 @@ const theme = createTheme({
     },
     warning: {
       main: "#fec90f",
-      light: '#fff4e5',
+      light: "#fff4e5",
       dark: "#dcb014",
       contrastText: "#ffffff",
-    }
+    },
   },
 });
 

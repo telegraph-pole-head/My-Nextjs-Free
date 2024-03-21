@@ -24,8 +24,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -67,11 +65,6 @@ export default function RootLayout({
           {/* ------------------------------------------- */}
           {/* End Page */}
           {/* ------------------------------------------- */}
-
-          {/* ------------------------------------------- */}
-          {/* Footer */}
-          {/* ------------------------------------------- */}
-          <Footer />
         </Container>
       </PageWrapper>
     </MainWrapper>
